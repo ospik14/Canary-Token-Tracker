@@ -1,0 +1,3 @@
+
+class CanaryNotFound(Exception):
+    pass
