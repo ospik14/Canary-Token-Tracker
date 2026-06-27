@@ -7,5 +7,6 @@ router = APIRouter(
 
 @router.get('/t/{token}')
 async def track_click(token: str, request: Request):
-    await proccess_the_target(token, request)
+    return await proccess_the_target(token, request)
+
     

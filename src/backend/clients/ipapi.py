@@ -1,7 +1,7 @@
 from httpx import AsyncClient
 from schemas.additional_data import IpAdditionalData
 
-async def get_location(client_ip: str):
+async def get_add_data(client_ip: str):
     async with AsyncClient() as client:
         response = await client.get(f'https://ipapi.co/{client_ip}/json/')
         if response.status_code == 200: 
