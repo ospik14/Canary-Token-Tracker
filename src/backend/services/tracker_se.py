@@ -1,8 +1,8 @@
 from fastapi import Request
-from repositories.tracker_repo import get_canary, add_visit
-from core.exceptions import CanaryNotFound
-from clients.ipapi import get_add_data
-from models.visits import Visits
+from backend.repositories.tracker_repo import get_canary, add_visit
+from backend.core.exceptions import CanaryNotFound
+from backend.clients.ipapi import get_add_data
+from backend.models.visits import Visits
 
 async def get_ip_adress(request: Request):
     x_forwarded_for = request.headers.get('x_forwarded_for')

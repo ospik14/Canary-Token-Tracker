@@ -8,7 +8,7 @@ class Canaries(Base):
     __tablename__='canaries'
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    token: Mapped[uuid.UUID] = mapped_column(UUID)
+    token: Mapped[str]
     description: Mapped[str]
     redirect_url: Mapped[str]
     created_at: Mapped[datetime] = mapped_column(
